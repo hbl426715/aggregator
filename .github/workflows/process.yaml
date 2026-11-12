@@ -1,19 +1,18 @@
 name: Process
 on:
   schedule:
-    - cron: "05 03 * * *"
-    - cron: "05 11 * * *"
+    - cron: "5 */6 * * *"
   workflow_dispatch:
 
 env:
   # time zone
   TZ: Asia/Shanghai
 
-  # network proxy aggregate config
-  SUBSCRIBE_CONF: ${{ secrets.SUBSCRIBE_CONF }}
-
   # token
   PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+
+  # github crawler token (reuse PUSH_TOKEN)
+  GH_TOKEN: ${{ secrets.PUSH_TOKEN }}
 
   # not check connective
   SKIP_ALIVE_CHECK: ${{ vars.SKIP_ALIVE_CHECK }}
@@ -48,7 +47,7 @@ jobs:
         run: pip3 install -r requirements.txt
 
       - name: Process
-        run: python -u subscribe/process.py --overwrite
+        run: python -u subscribe/process.py -s config.json --overwrite
 
       - name: Timestamp
         run: date
