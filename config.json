@@ -1,132 +1,148 @@
 {
-    "sites": [
-        {
-            "name": "pawdroid-free-servers",
-            "subscribe": [
-                "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub"
-            ],
-            "enable": true,
-            "push_to": ["free"],
-            "check_alive": true,
-            "max_rate": 3.0,
-            "count": 1
-        },
-        {
-            "name": "automerge-public-nodes",
-            "subscribe": [
-                "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt"
-            ],
-            "enable": true,
-            "push_to": ["free"],
-            "check_alive": true,
-            "max_rate": 3.0,
-            "count": 1
-        },
-        {
-            "name": "ermaozi-v2ray",
-            "subscribe": [
-                "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt"
-            ],
-            "enable": true,
-            "push_to": ["free"],
-            "check_alive": true,
-            "max_rate": 3.0,
-            "count": 1
-        }
-    ],
-    "crawl": {
-        "enable": true,
-        "exclude": "",
-        "max_fails": 5,
-        "include_nodes": true,
-        "persist": {
-            "subscribe": "crawledsubs",
-            "nodes": "crawledproxies"
-        },
-        "telegram": {
-            "enable": true,
-            "pages": 3,
-            "exclude": "",
-            "channels": {
-                "go4sharing": {
-                    "include": "订阅|subscription",
-                    "exclude": "付费|vip|premium|广告",
-                    "push_to": ["free"]
-                },
-                "proxysharecn": {
-                    "include": "订阅|subscription",
-                    "exclude": "付费|vip|premium|广告",
-                    "push_to": ["free"]
-                },
-                "jiedian168": {
-                    "include": "订阅|subscription|节点",
-                    "exclude": "付费|vip|premium|广告",
-                    "push_to": ["free"]
-                },
-                "wxdy666": {
-                    "include": "订阅|subscription",
-                    "exclude": "付费|vip|premium|广告",
-                    "push_to": ["free"]
-                }
-            }
-        },
-        "google": {
-            "enable": false
-        },
-        "yandex": {
-            "enable": false
-        },
-        "github": {
-            "enable": true,
-            "pages": 2,
-            "push_to": ["free"],
-            "exclude": "test|demo|example"
-        },
-        "twitter": {
-            "enable": false
-        },
-        "repositories": [],
-        "pages": []
+ "sites": [
+  {
+   "name": "pawdroid-free-servers",
+   "subscribe": [
+    "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub"
+   ],
+   "enable": true,
+   "push_to": [
+    "free"
+   ],
+   "check_alive": true,
+   "max_rate": 3.0,
+   "count": 1
+  },
+  {
+   "name": "automerge-public-nodes",
+   "subscribe": [
+    "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt"
+   ],
+   "enable": true,
+   "push_to": [
+    "free"
+   ],
+   "check_alive": true,
+   "max_rate": 3.0,
+   "count": 1
+  },
+  {
+   "name": "ermaozi-v2ray",
+   "subscribe": [
+    "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt"
+   ],
+   "enable": true,
+   "push_to": [
+    "free"
+   ],
+   "check_alive": true,
+   "max_rate": 3.0,
+   "count": 1
+  }
+ ],
+ "crawl": {
+  "enable": true,
+  "exclude": "",
+  "max_fails": 5,
+  "include_nodes": true,
+  "persist": {
+   "subscribe": "crawledsubs",
+   "nodes": "crawledproxies"
+  },
+  "telegram": {
+   "enable": true,
+   "pages": 3,
+   "exclude": "",
+   "channels": {
+    "go4sharing": {
+     "include": "订阅|subscription",
+     "exclude": "付费|vip|premium|广告",
+     "push_to": [
+      "free"
+     ]
     },
-    "groups": {
-        "free": {
-            "emoji": true,
-            "list_only": true,
-            "targets": {
-                "clash": "free-clash",
-                "singbox": "free-singbox",
-                "v2ray": "free-v2ray"
-            }
-        }
+    "proxysharecn": {
+     "include": "订阅|subscription",
+     "exclude": "付费|vip|premium|广告",
+     "push_to": [
+      "free"
+     ]
     },
-    "storage": {
-        "engine": "gist",
-        "items": {
-            "free-clash": {
-                "username": "hbl426715",
-                "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
-                "filename": "clash.yaml"
-            },
-            "free-singbox": {
-                "username": "hbl426715",
-                "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
-                "filename": "singbox.json"
-            },
-            "free-v2ray": {
-                "username": "hbl426715",
-                "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
-                "filename": "v2ray.txt"
-            },
-            "crawledsubs": {
-                "username": "hbl426715",
-                "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
-                "filename": "crawled_subs.txt"
-            },
-            "crawledproxies": {
-                "username": "hbl426715",
-                "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
-                "filename": "crawled_proxies.txt"
-            }
-        }
+    "jiedian168": {
+     "include": "订阅|subscription|节点",
+     "exclude": "付费|vip|premium|广告",
+     "push_to": [
+      "free"
+     ]
+    },
+    "wxdy666": {
+     "include": "订阅|subscription",
+     "exclude": "付费|vip|premium|广告",
+     "push_to": [
+      "free"
+     ]
     }
+   }
+  },
+  "google": {
+   "enable": false
+  },
+  "yandex": {
+   "enable": false
+  },
+  "github": {
+   "enable": true,
+   "pages": 2,
+   "push_to": [
+    "free"
+   ],
+   "exclude": "test|demo|example"
+  },
+  "twitter": {
+   "enable": false
+  },
+  "repositories": [],
+  "pages": []
+ },
+ "groups": {
+  "free": {
+   "emoji": true,
+   "list_only": false,
+   "targets": {
+    "clash": "free-clash",
+    "singbox": "free-singbox",
+    "v2ray": "free-v2ray"
+   }
+  }
+ },
+ "storage": {
+  "engine": "gist",
+  "items": {
+   "free-clash": {
+    "username": "hbl426715",
+    "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
+    "filename": "clash.yaml"
+   },
+   "free-singbox": {
+    "username": "hbl426715",
+    "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
+    "filename": "singbox.json"
+   },
+   "free-v2ray": {
+    "username": "hbl426715",
+    "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
+    "filename": "v2ray.txt"
+   },
+   "crawledsubs": {
+    "username": "hbl426715",
+    "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
+    "filename": "crawled_subs.txt"
+   },
+   "crawledproxies": {
+    "username": "hbl426715",
+    "gist_id": "6ddca8bc32a9c20b10ac0bd0cbe07d89",
+    "filename": "crawled_proxies.txt"
+   }
+  }
+ }
 }
